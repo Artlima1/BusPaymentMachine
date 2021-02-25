@@ -117,8 +117,6 @@ BEGIN
     -- ------ processo para comparar os dados de saida com os do arquivo saida2.txt
     -- ------------------------------------------------------------------------------------  
     check_output_trigger : PROCESS
-        VARIABLE linea : line;
-        VARIABLE value : STD_LOGIC_VECTOR(W DOWNTO 0);
     BEGIN
         WAIT FOR 30 ns;
         flag_check <= '1';
