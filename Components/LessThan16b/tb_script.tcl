@@ -12,5 +12,5 @@ add wave sim:/tb_LessThan16b/*
 view wave
 view structure
 view signals
-run 140ns
+run 180ns
 #quit -force

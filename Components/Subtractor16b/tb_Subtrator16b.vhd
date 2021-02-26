@@ -107,6 +107,8 @@ BEGIN
         WHILE true LOOP
             IF (flag_write = '1') THEN
                 output := data_output;
+                ASSERT(temp = output)
+                    REPORT "Saida errada!" SEVERITY warning;
                 write(linea, output);
                 writeline(outputs, linea);
             END IF;
@@ -127,7 +129,7 @@ BEGIN
         WAIT;
     END PROCESS check_output_trigger;
 
-    checking_outputs : PROCESS
+    load_expected_output : PROCESS
         VARIABLE linea : line;
         VARIABLE expected_value : STD_LOGIC_VECTOR (W DOWNTO 0);
     BEGIN
@@ -136,10 +138,8 @@ BEGIN
                 readline(correct_outputs, linea);
                 read(linea, expected_value);
                 temp <= expected_value;
-                ASSERT(temp = data_output)
-                    REPORT "Saida errada!" SEVERITY warning;
             END IF;
             WAIT FOR 10 ns;
         END LOOP;
-    END PROCESS checking_outputs;
+    END PROCESS load_expected_output;
 END;

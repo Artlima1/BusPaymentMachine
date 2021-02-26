@@ -1,1 +1,3 @@
 BusPaymentMachine
+
+A solução modelada é tal que teremos uma máquina capaz de ler o cartão do usuário e identificar inicialmente se o saldo do mesmo é suficiente para permitir acesso ao ônibus, caso o saldo seja o suficiente, o sistema irá, então, descontar o valor da passagem no saldo atual, e armazenar o novo saldo no sistema, em seguida, a catraca é liberada e as informações de saldo são mostradas para o cliente no visor da máquina. Porém, caso o saldo atual não seja o suficiente, um aviso de erro é emitido, e a catraca permanece travada.

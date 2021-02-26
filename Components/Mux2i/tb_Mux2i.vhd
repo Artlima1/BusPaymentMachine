@@ -6,28 +6,30 @@ USE ieee.std_logic_textio.ALL;
 USE std.textio.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY tb_LessThan16b IS
+ENTITY tb_Mux2i IS
     GENERIC (
         W : INTEGER := 15
     );
-END tb_LessThan16b;
+END tb_Mux2i;
 
-ARCHITECTURE behavior OF tb_LessThan16b IS
+ARCHITECTURE behavior OF tb_Mux2i IS
 
     -- Component Declaration for the Unit Under Test (UUT)
 
-    COMPONENT LessThan16b
+    COMPONENT Mux2i
         PORT (
-            A, B : IN STD_LOGIC_VECTOR(W DOWNTO 0);
-            lt : OUT STD_LOGIC
+            S : IN STD_LOGIC; -- control input
+            A, B : IN STD_LOGIC_VECTOR(W DOWNTO 0); -- data inputs
+            Q : OUT STD_LOGIC_VECTOR(W DOWNTO 0) -- data output
         );
     END COMPONENT;
 
+    SIGNAL s : STD_LOGIC;
     SIGNAL data_in_A : STD_LOGIC_VECTOR(W DOWNTO 0);
     SIGNAL data_in_B : STD_LOGIC_VECTOR(W DOWNTO 0);
-    SIGNAL data_output : STD_LOGIC;
-    SIGNAL temp : STD_LOGIC;
-    CONSTANT max_value : NATURAL := 4;
+    SIGNAL data_output : STD_LOGIC_VECTOR(W DOWNTO 0);
+    SIGNAL temp : STD_LOGIC_VECTOR(W DOWNTO 0);
+    CONSTANT max_value : NATURAL := 6;
     CONSTANT mim_value : NATURAL := 1;
     SIGNAL read_data_in : STD_LOGIC := '0';
     SIGNAL flag_write : STD_LOGIC := '0';
@@ -42,12 +44,47 @@ ARCHITECTURE behavior OF tb_LessThan16b IS
 
 BEGIN
     -- Instantiate the Unit Under Test (UUT) or Design Under Test (DUT)
-    DUT : LessThan16b
+    DUT : Mux2i
     PORT MAP(
         A => data_in_A,
         B => data_in_B,
-        lt => data_output
+        Q => data_output,
+        S => s
     );
+
+    ------------------------------------------------------------------------------------
+    ----------------- processo para gerar o estimulo de s
+    ------------------------------------------------------------------------------------		
+    s_S : PROCESS
+    BEGIN
+        WAIT FOR (OFFSET + 3 * PERIOD);
+        s <= '1';
+        WAIT FOR (4 * PERIOD);
+        s <= '0';
+        WAIT;
+    END PROCESS s_S;
+    ------------------------------------------------------------------------------------
+    ----------------- processo para leer os dados do arquivo data_in.txt
+    ------------------------------------------------------------------------------------
+    read_inputs_data_in : PROCESS
+        VARIABLE lineaA : line;
+        VARIABLE inputA : STD_LOGIC_VECTOR(W DOWNTO 0);
+        VARIABLE lineaB : line;
+        VARIABLE inputB : STD_LOGIC_VECTOR(W DOWNTO 0);
+    BEGIN
+        WHILE NOT endfile(inputs_data_in_A) LOOP
+            IF read_data_in = '1' THEN
+                readline(inputs_data_in_A, lineaA);
+                read(lineaA, inputA);
+                data_in_A <= inputA;
+                readline(inputs_data_in_B, lineaB);
+                read(lineaB, inputB);
+                data_in_B <= inputB;
+            END IF;
+            WAIT FOR PERIOD;
+        END LOOP;
+        WAIT;
+    END PROCESS read_inputs_data_in;
 
     ------------------------------------------------------------------------------------
     ----------------- processo para gerar os estimulos de entrada
@@ -63,29 +100,6 @@ BEGIN
         read_data_in <= '0';
         WAIT;
     END PROCESS tb_stimulus;
-
-    ------------------------------------------------------------------------------------
-    ----------------- processo para leer os dados do arquivo data_in.txt
-    ------------------------------------------------------------------------------------
-    read_inputs_data_in : PROCESS
-        VARIABLE lineaA: line;
-        VARIABLE lineaB: line;
-        VARIABLE inputA : STD_LOGIC_VECTOR(W DOWNTO 0);
-        VARIABLE inputB : STD_LOGIC_VECTOR(W DOWNTO 0);
-    BEGIN
-        WHILE ((NOT endfile(inputs_data_in_A)) AND (NOT endfile(inputs_data_in_B))) LOOP
-            IF read_data_in = '1' THEN
-                readline(inputs_data_in_A, lineaA);
-                readline(inputs_data_in_B, lineaB);
-                read(lineaA, inputA);
-                read(lineaB, inputB);
-                data_in_A <= inputA;
-                data_in_B <= inputB;
-            END IF;
-            WAIT FOR PERIOD;
-        END LOOP;
-        WAIT;
-    END PROCESS read_inputs_data_in;
 
     ------------------------------------------------------------------------------------
     ------ processo para gerar os estimulos de escrita do arquivo de saida
@@ -108,15 +122,16 @@ BEGIN
 
     write_outputs : PROCESS
         VARIABLE linea : line;
-        VARIABLE output : STD_LOGIC;
+        VARIABLE output : STD_LOGIC_VECTOR(W DOWNTO 0);
     BEGIN
         WHILE true LOOP
             IF (flag_write = '1') THEN
                 output := data_output;
                 ASSERT(temp = output)
-                    REPORT "Saida errada!" SEVERITY warning;
+                REPORT "Saida errada!" SEVERITY warning;
                 write(linea, output);
                 writeline(outputs, linea);
+                
             END IF;
             WAIT FOR PERIOD;
         END LOOP;
@@ -138,7 +153,7 @@ BEGIN
 
     checking_outputs : PROCESS
         VARIABLE linea : line;
-        VARIABLE expected_value : STD_LOGIC;
+        VARIABLE expected_value : STD_LOGIC_VECTOR (W DOWNTO 0);
     BEGIN
         WHILE true LOOP
             IF (flag_check = '1') THEN
