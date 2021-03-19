@@ -24,9 +24,7 @@ ARCHITECTURE teste OF tb_BusPaymentMachine IS
             read_DB : OUT STD_LOGIC;
             lib : OUT STD_LOGIC;
             c_id : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-            c_budget : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-
-            c_budget_ld_out: OUT STD_LOGIC
+            c_budget : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0)
 
         );
     END COMPONENT;
@@ -46,11 +44,8 @@ ARCHITECTURE teste OF tb_BusPaymentMachine IS
     SIGNAL c_id : STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
     SIGNAL c_budget : STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
 
-    SIGNAL c_budget_ld_out: STD_LOGIC;
-
 BEGIN
-    instancia_BusPaymentMachine : BusPaymentMachine PORT MAP(clock => clock, id => id, pass => pass, s_read => s_read, id_value => id_value, budget_read => budget_read, price => price, denied => denied, write_DB => write_DB, read_DB => read_DB, lib => lib, c_id => c_id, c_budget => c_budget, 
-    c_budget_ld_out=>c_budget_ld_out);
+    instancia_BusPaymentMachine : BusPaymentMachine PORT MAP(clock => clock, id => id, pass => pass, s_read => s_read, id_value => id_value, budget_read => budget_read, price => price, denied => denied, write_DB => write_DB, read_DB => read_DB, lib => lib, c_id => c_id, c_budget => c_budget);
 
     clock <= NOT clock AFTER 1 ns;
     id <= '0', '1' AFTER 4 ns, '0' AFTER 6 ns, '1' AFTER 22 ns, '0' AFTER 24 ns;

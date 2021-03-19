@@ -19,9 +19,7 @@ ENTITY BusPaymentMachine IS
         read_DB : OUT STD_LOGIC;
         lib : OUT STD_LOGIC;
         c_id : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-        c_budget : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-
-        c_budget_ld_out: OUT STD_LOGIC
+        c_budget : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0)
     );
 END BusPaymentMachine;
 ARCHITECTURE structure OF BusPaymentMachine IS
@@ -107,6 +105,4 @@ BEGIN
         read_DB,
         lib
     );
-
-    c_budget_ld_out<=c_budget_ld;
 END structure;
