@@ -10,6 +10,7 @@ ENTITY BusPaymentMachine IS
         id : IN STD_LOGIC;
         pass : IN STD_LOGIC;
         s_read : IN STD_LOGIC;
+        reset : IN STD_LOGIC;
         id_value : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
         budget_read : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
         price : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
@@ -52,6 +53,7 @@ ARCHITECTURE structure OF BusPaymentMachine IS
             s_read : IN STD_LOGIC;
             pass : IN STD_LOGIC;
             budget_lt_price : IN STD_LOGIC;
+            reset : IN STD_LOGIC;
 
             c_id_ld : OUT STD_LOGIC;
             c_id_clr : OUT STD_LOGIC;
@@ -68,7 +70,7 @@ ARCHITECTURE structure OF BusPaymentMachine IS
     END COMPONENT;
 
     SIGNAL c_id_clr, c_id_ld, c_budget_clr, c_budget_ld, price_clr, price_ld, budget_lt_price, S0 : STD_LOGIC;
-    
+
 BEGIN
     DATAPATH_COMPONENT : DataPath PORT MAP(
         clock,
@@ -93,6 +95,7 @@ BEGIN
         s_read,
         pass,
         budget_lt_price,
+        reset,
         c_id_ld,
         c_id_clr,
         c_budget_ld,
