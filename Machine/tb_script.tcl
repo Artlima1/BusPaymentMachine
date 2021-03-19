@@ -10,6 +10,7 @@ vcom -explicit  -93 "../Components/LessThan16b/LessThan16b.vhd"
 vcom -explicit  -93 "../Components/Mux2i/Mux2i.vhd"
 vcom -explicit  -93 "../Components/Register16b/Register16b.vhd"
 vcom -explicit  -93 "../Components/Subtractor16b/Subtrator16b.vhd"
+vcom -explicit  -93 "../Components/DataPath/DataPath.vhd"
 vcom -explicit  -93 "tb_BusPaymentMachine.vhd"
 vsim -t 1ns   -lib work tb_buspaymentmachine
 add wave sim:/tb_buspaymentmachine/*

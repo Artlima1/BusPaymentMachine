@@ -21,7 +21,6 @@ ENTITY controller IS
         write_DB : OUT STD_LOGIC; -- connection module to write new budget to user
         read_DB : OUT STD_LOGIC; -- connection module to read budget from user
         lib : OUT STD_LOGIC -- allow user to pass through
-
     );
 END controller;
 ARCHITECTURE arch OF controller IS
@@ -214,4 +213,5 @@ BEGIN
 
         END CASE;
     END PROCESS;
+
 END arch;

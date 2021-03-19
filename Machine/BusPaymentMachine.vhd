@@ -19,39 +19,31 @@ ENTITY BusPaymentMachine IS
         read_DB : OUT STD_LOGIC;
         lib : OUT STD_LOGIC;
         c_id : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-        c_budget : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0)
+        c_budget : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
+
+        c_budget_ld_out: OUT STD_LOGIC
     );
 END BusPaymentMachine;
 ARCHITECTURE structure OF BusPaymentMachine IS
-    COMPONENT Register16b
+    COMPONENT DataPath
         PORT (
             clock : IN STD_LOGIC;
-            ld : IN STD_LOGIC;
-            reset : IN STD_LOGIC;
-            D : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-            Q : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0)
-        );
-    END COMPONENT;
 
-    COMPONENT Subtrator16b
-        PORT (
-            x, y : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-            s : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0)
-        );
-    END COMPONENT;
+            id_value : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
+            budget_read : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
+            price : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
 
-    COMPONENT Mux2i
-        PORT (
-            S : IN STD_LOGIC;
-            A, B : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-            Q : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0)
-        );
-    END COMPONENT;
+            c_id : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
+            c_budget : OUT STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
 
-    COMPONENT LessThan16b
-        PORT (
-            A, B : IN STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
-            lt : OUT STD_LOGIC
+            c_id_ld : IN STD_LOGIC;
+            c_id_clr : IN STD_LOGIC;
+            c_budget_ld : IN STD_LOGIC;
+            c_budget_clr : IN STD_LOGIC;
+            price_ld : IN STD_LOGIC;
+            price_clr : IN STD_LOGIC;
+            S0 : IN STD_LOGIC;
+            budget_lt_price : OUT STD_LOGIC
         );
     END COMPONENT;
 
@@ -78,16 +70,24 @@ ARCHITECTURE structure OF BusPaymentMachine IS
     END COMPONENT;
 
     SIGNAL c_id_clr, c_id_ld, c_budget_clr, c_budget_ld, price_clr, price_ld, budget_lt_price, S0 : STD_LOGIC;
-    SIGNAL budget_minus_price, c_budget_reg, price_reg, mux_out : STD_LOGIC_VECTOR(W - 1 DOWNTO 0);
+    
 BEGIN
-    C_ID_REGISTER : Register16b PORT MAP(clock, c_id_ld, c_id_clr, id_value, c_id);
-    C_BUDGET_REGISTER : Register16b PORT MAP(clock, c_budget_ld, c_budget_clr, mux_out, c_budget_reg);
-    PRICE_REGISTER : Register16b PORT MAP(clock, price_ld, price_clr, price, price_reg);
-
-    LESSTHAN : LessThan16b PORT MAP(c_budget_reg, price_reg, budget_lt_price);
-    SUBTRACTOR : Subtrator16b PORT MAP(c_budget_reg, price_reg, budget_minus_price);
-
-    MUX : Mux2i PORT MAP(S0, budget_read, budget_minus_price, mux_out);
+    DATAPATH_COMPONENT : DataPath PORT MAP(
+        clock,
+        id_value,
+        budget_read,
+        price,
+        c_id,
+        c_budget,
+        c_id_ld,
+        c_id_clr,
+        c_budget_ld,
+        c_budget_clr,
+        price_ld,
+        price_clr,
+        S0,
+        budget_lt_price
+    );
 
     CONTROLLER_COMPONENT : Controller PORT MAP(
         clock,
@@ -108,5 +108,5 @@ BEGIN
         lib
     );
 
-    c_budget <= c_budget_reg;
+    c_budget_ld_out<=c_budget_ld;
 END structure;

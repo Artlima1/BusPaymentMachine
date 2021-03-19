@@ -1,0 +1,85 @@
+# Reading D:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do BusPaymentMachine_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Subtractor16b/Subtrator16b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Subtrator16b
+# -- Compiling architecture comportamental of Subtrator16b
+# vcom -93 -work work {D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Register16b/Register16b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Register16b
+# -- Compiling architecture RTL of Register16b
+# vcom -93 -work work {D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Mux2i/Mux2i.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Mux2i
+# -- Compiling architecture arch of Mux2i
+# vcom -93 -work work {D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/LessThan16b/LessThan16b.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity LessThan16b
+# -- Compiling architecture comportamental of LessThan16b
+# vcom -93 -work work {D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Controller/Controller.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity controller
+# -- Compiling architecture arch of controller
+# vcom -93 -work work {D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/BusPaymentMachine.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BusPaymentMachine
+# -- Compiling architecture structure of BusPaymentMachine
+# 
+# vcom -93 -work work {D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/tb_BusPaymentMachine.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity tb_BussPaymentMachine
+# -- Compiling architecture teste of tb_BussPaymentMachine
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  tb_BusPaymentMachine
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_BusPaymentMachine 
+# ** Error: (vsim-3170) Could not find 'D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/simulation/modelsim/rtl_work.tb_BusPaymentMachine'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./BusPaymentMachine_run_msim_rtl_vhdl.do PAUSED at line 17
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line
+# A time value could not be extracted from the current line

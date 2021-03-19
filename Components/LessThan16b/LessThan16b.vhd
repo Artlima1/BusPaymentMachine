@@ -15,5 +15,5 @@ END LessThan16b;
 
 ARCHITECTURE comportamental OF LessThan16b IS
 BEGIN
-	lt <= '1' WHEN(signed(A) < signed(B)) ELSE '0';
+	lt <= '1' WHEN(unsigned(A) < unsigned(B)) ELSE '0';
 END comportamental;

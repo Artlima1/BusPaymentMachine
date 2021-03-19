@@ -1,0 +1,13 @@
+
+State Machine - |BusPaymentMachine|controller:CONTROLLER_COMPONENT|current_state
+Name current_state.allow current_state.pay current_state.newBudget current_state.error_st current_state.comp current_state.att current_state.search current_state.read_st current_state.wait_st current_state.Init 
+current_state.Init 0 0 0 0 0 0 0 0 0 0 
+current_state.wait_st 0 0 0 0 0 0 0 0 1 1 
+current_state.read_st 0 0 0 0 0 0 0 1 0 1 
+current_state.search 0 0 0 0 0 0 1 0 0 1 
+current_state.att 0 0 0 0 0 1 0 0 0 1 
+current_state.comp 0 0 0 0 1 0 0 0 0 1 
+current_state.error_st 0 0 0 1 0 0 0 0 0 1 
+current_state.newBudget 0 0 1 0 0 0 0 0 0 1 
+current_state.pay 0 1 0 0 0 0 0 0 0 1 
+current_state.allow 1 0 0 0 0 0 0 0 0 1 
