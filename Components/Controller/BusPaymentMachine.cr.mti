@@ -1,0 +1,67 @@
+D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Register16b/Register16b.vhd {1 {vcom -work work -2002 -explicit D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Register16b/Register16b.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity Register16b
+-- Compiling architecture RTL of Register16b
+
+} {} {}} D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Controller/Controller.vhd {1 {vcom -work work -2002 -explicit D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Controller/Controller.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity controller
+-- Compiling architecture arch of controller
+
+} {} {}} D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Subtractor16b/Subtrator16b.vhd {1 {vcom -work work -2002 -explicit D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Subtractor16b/Subtrator16b.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity Subtrator16b
+-- Compiling architecture comportamental of Subtrator16b
+
+} {} {}} D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/BusPaymentMachine.vhd {1 {vcom -work work -2002 -explicit D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/BusPaymentMachine.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity BusPaymentMachine
+-- Compiling architecture structure of BusPaymentMachine
+
+} {} {}} D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/tb_BusPaymentMachine.vhd {1 {vcom -work work -2002 -explicit D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/tb_BusPaymentMachine.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity tb_BusPaymentMachine
+-- Compiling architecture teste of tb_BusPaymentMachine
+
+} {} {}} D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Mux2i/Mux2i.vhd {1 {vcom -work work -2002 -explicit D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Mux2i/Mux2i.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Mux2i
+-- Compiling architecture arch of Mux2i
+
+} {} {}} D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/LessThan16b/LessThan16b.vhd {1 {vcom -work work -2002 -explicit D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/LessThan16b/LessThan16b.vhd
+Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Loading package NUMERIC_STD
+-- Compiling entity LessThan16b
+-- Compiling architecture comportamental of LessThan16b
+
+} {} {}}

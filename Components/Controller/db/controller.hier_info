@@ -1,0 +1,23 @@
+|controller
+clock => current_state~3.DATAIN
+id => current_state.DATAB
+id => Selector0.IN2
+s_read => current_state.DATAB
+s_read => Selector1.IN2
+pass => Selector0.IN5
+pass => Selector2.IN2
+budget_lt_price => current_state.DATAB
+budget_lt_price => current_state.DATAB
+c_id_ld <= c_id_ld.DB_MAX_OUTPUT_PORT_TYPE
+c_id_clr <= c_id_clr.DB_MAX_OUTPUT_PORT_TYPE
+c_budget_ld <= c_budget_ld.DB_MAX_OUTPUT_PORT_TYPE
+c_budget_clr <= c_budget_clr.DB_MAX_OUTPUT_PORT_TYPE
+c_price_ld <= c_price_ld.DB_MAX_OUTPUT_PORT_TYPE
+c_price_clr <= c_price_clr.DB_MAX_OUTPUT_PORT_TYPE
+denied <= denied.DB_MAX_OUTPUT_PORT_TYPE
+S0 <= S0.DB_MAX_OUTPUT_PORT_TYPE
+write_DB <= write_DB.DB_MAX_OUTPUT_PORT_TYPE
+read_DB <= read_DB.DB_MAX_OUTPUT_PORT_TYPE
+lib <= lib.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,270 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\altera\13.0sp1\TrabalhoFinal\BusPaymentMachine\Machine\simulation\modelsim
+Ebuspaymentmachine
+Z1 w1616105553
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dD:\altera\13.0sp1\TrabalhoFinal\BusPaymentMachine\Machine\simulation\modelsim
+Z5 8D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/BusPaymentMachine.vhd
+Z6 FD:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/BusPaymentMachine.vhd
+l0
+L4
+Vn<oG]XcO5j2GFM5Dl3LNj0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1616107398.138000
+Z9 !s90 -reportprogress|300|-93|-work|work|D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/BusPaymentMachine.vhd|
+Z10 !s107 D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/BusPaymentMachine.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 W;_N?^Uf4^Q<dR<IEn4Hb2
+!i10b 1
+Astructure
+R2
+R3
+DEx4 work 17 buspaymentmachine 0 22 n<oG]XcO5j2GFM5Dl3LNj0
+l82
+L25
+VWP7UXI8V]E3F:oS?h<nb23
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 JjQhh^3F@A3THhl;gA]YA3
+!i10b 1
+Econtroller
+Z13 w1616107230
+Z14 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R2
+R3
+R4
+Z15 8D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Controller/Controller.vhd
+Z16 FD:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Controller/Controller.vhd
+l0
+L5
+Vb89oYdV`[<0YUIL66gZe@0
+R7
+31
+Z17 !s108 1616107397.647000
+Z18 !s90 -reportprogress|300|-93|-work|work|D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Controller/Controller.vhd|
+Z19 !s107 D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Controller/Controller.vhd|
+R11
+R12
+!s100 oPfBhEUEX`DZmU72G<UDc0
+!i10b 1
+Aarch
+R14
+R2
+R3
+DEx4 work 10 controller 0 22 b89oYdV`[<0YUIL66gZe@0
+l33
+L27
+V^3K]DV1leBIkU>7^a4bJo2
+R7
+31
+R17
+R18
+R19
+R11
+R12
+!s100 PoRLF>BzIYd4LMJc;[A?E3
+!i10b 1
+Elessthan16b
+Z20 w1614221216
+R14
+Z21 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z22 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R2
+R3
+R4
+Z23 8D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/LessThan16b/LessThan16b.vhd
+Z24 FD:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/LessThan16b/LessThan16b.vhd
+l0
+L6
+Va<Af;>9@GU:iXCXh[eCQY2
+R7
+31
+Z25 !s108 1616107397.004000
+Z26 !s90 -reportprogress|300|-93|-work|work|D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/LessThan16b/LessThan16b.vhd|
+Z27 !s107 D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/LessThan16b/LessThan16b.vhd|
+R11
+R12
+!s100 0BN6m1R23GF`B66:j9z;N0
+!i10b 1
+Acomportamental
+R14
+R21
+R22
+R2
+R3
+DEx4 work 11 lessthan16b 0 22 a<Af;>9@GU:iXCXh[eCQY2
+l17
+L16
+V_9OC`=SNYFE3iLn1Bc=Te3
+R7
+31
+R25
+R26
+R27
+R11
+R12
+!s100 RlL:N3ZSYlaoJG6P7T]zb3
+!i10b 1
+Emux2i
+Z28 w1614299456
+R14
+R2
+R3
+R4
+Z29 8D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Mux2i/Mux2i.vhd
+Z30 FD:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Mux2i/Mux2i.vhd
+l0
+L5
+V;]g7QP3_VTcWIDEHbd2GM2
+R7
+31
+Z31 !s108 1616107396.381000
+Z32 !s90 -reportprogress|300|-93|-work|work|D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Mux2i/Mux2i.vhd|
+Z33 !s107 D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Mux2i/Mux2i.vhd|
+R11
+R12
+!s100 TmSNzFLZb6gM?<g]YYLkM2
+!i10b 1
+Aarch
+R14
+R2
+R3
+DEx4 work 5 mux2i 0 22 ;]g7QP3_VTcWIDEHbd2GM2
+l16
+L15
+VX]UD>jCVa?Wo:J;Cc1fdc0
+R7
+31
+R31
+R32
+R33
+R11
+R12
+!s100 T6O;YlRKb9UNR<?d?<8ig1
+!i10b 1
+Eregister16b
+Z34 w1614219793
+R2
+R3
+R4
+Z35 8D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Register16b/Register16b.vhd
+Z36 FD:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Register16b/Register16b.vhd
+l0
+L4
+VT2PlNTkQQfQaV45haHmzg2
+R7
+31
+Z37 !s108 1616107396.010000
+Z38 !s90 -reportprogress|300|-93|-work|work|D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Register16b/Register16b.vhd|
+Z39 !s107 D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Register16b/Register16b.vhd|
+R11
+R12
+!s100 ]oX`ac72XK_3E5An65D>R2
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 11 register16b 0 22 T2PlNTkQQfQaV45haHmzg2
+l18
+L17
+V0[`R^kD=QVM:]dN52Zhl40
+R7
+31
+R37
+R38
+R39
+R11
+R12
+!s100 nR1hn;UeAOW_=7?gnL8jV1
+!i10b 1
+Esubtrator16b
+Z40 w1616073161
+R14
+R21
+R22
+R2
+R3
+R4
+Z41 8D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Subtractor16b/Subtrator16b.vhd
+Z42 FD:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Subtractor16b/Subtrator16b.vhd
+l0
+L6
+V?oJTVIaFLC_BRVcMjfA<V2
+R7
+31
+Z43 !s108 1616107395.602000
+Z44 !s90 -reportprogress|300|-93|-work|work|D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Subtractor16b/Subtrator16b.vhd|
+Z45 !s107 D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Components/Subtractor16b/Subtrator16b.vhd|
+R11
+R12
+!s100 IElaPnfd9[bdckBb74nhm1
+!i10b 1
+Acomportamental
+R14
+R21
+R22
+R2
+R3
+DEx4 work 12 subtrator16b 0 22 ?oJTVIaFLC_BRVcMjfA<V2
+l16
+L15
+Vz=hnnh:jj7D^;TX1dUET_2
+R7
+31
+R43
+R44
+R45
+R11
+R12
+!s100 4j;E=W_IeK;8QPzHg:[^B1
+!i10b 1
+Etb_busspaymentmachine
+Z46 w1616072754
+R21
+R22
+R2
+R3
+R4
+Z47 8D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/tb_BusPaymentMachine.vhd
+Z48 FD:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/tb_BusPaymentMachine.vhd
+l0
+L5
+V9o3Ei9^4BY5?30D99`K;i2
+!s100 XLkbo;6^`Yk?ILBOWRXT23
+R7
+31
+!i10b 1
+Z49 !s108 1616107398.612000
+Z50 !s90 -reportprogress|300|-93|-work|work|D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/tb_BusPaymentMachine.vhd|
+Z51 !s107 D:/altera/13.0sp1/TrabalhoFinal/BusPaymentMachine/Machine/tb_BusPaymentMachine.vhd|
+R11
+R12
+Ateste
+R21
+R22
+R2
+R3
+DEx4 work 21 tb_busspaymentmachine 0 22 9o3Ei9^4BY5?30D99`K;i2
+l47
+L11
+Vi9<W=37^9ZBX2Y;n]c1>I3
+!s100 e0]6:BCMPBAi_BP7U5[DV2
+R7
+31
+!i10b 1
+R49
+R50
+R51
+R11
+R12
